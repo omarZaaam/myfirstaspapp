@@ -7,7 +7,7 @@ EXPOSE 8222
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["myfirstaspdonet/myfirstaspdonet.csproj", "myfirstaspdonet/"]
+COPY ["myfirstaspdonet.csproj", "myfirstaspdonet/"]
 RUN dotnet restore "myfirstaspdonet/myfirstaspdonet.csproj"
 COPY . .
 WORKDIR "/src/myfirstaspdonet"
